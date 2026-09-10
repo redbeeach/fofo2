@@ -1,10 +1,12 @@
+import { projects } from "@/data/projects";
+
 export const stories = [
   {
     profileImg: "/stories/profile-1.png",
     profileName: "Behance",
     title: ["Designing quiet worlds", "where motion tells", "the whole story"],
     linkLabel: "Explore Work",
-    linkSrc: "/sample-project",
+    linkSrc: projects[0].route,
     storyImg: "/stories/story-1.jpg",
   },
   {
@@ -12,7 +14,7 @@ export const stories = [
     profileName: "Dribbble",
     title: ["Light, reflection,", "and invisible form", "in digital motion"],
     linkLabel: "Explore Work",
-    linkSrc: "/sample-project",
+    linkSrc: projects[1].route,
     storyImg: "/stories/story-2.jpg",
   },
   {
@@ -20,7 +22,7 @@ export const stories = [
     profileName: "Awwwards",
     title: ["A motion identity", "built around silence,", "texture, and time"],
     linkLabel: "Explore Work",
-    linkSrc: "/sample-project",
+    linkSrc: projects[2].route,
     storyImg: "/stories/story-3.jpg",
   },
   {
@@ -28,7 +30,7 @@ export const stories = [
     profileName: "Adobe",
     title: ["When design meets", "science fiction,", "everything glows"],
     linkLabel: "Explore Work",
-    linkSrc: "/sample-project",
+    linkSrc: projects[3].route,
     storyImg: "/stories/story-4.jpg",
   },
   {
@@ -36,7 +38,7 @@ export const stories = [
     profileName: "Dribbble",
     title: ["Cinematic branding", "for the in-between", "moments of light"],
     linkLabel: "Explore Work",
-    linkSrc: "/sample-project",
+    linkSrc: projects[4].route,
     storyImg: "/stories/story-5.jpg",
   },
   {
@@ -44,7 +46,7 @@ export const stories = [
     profileName: "Adobe",
     title: ["Interactive motion", "built to move softly", "and stay longer"],
     linkLabel: "Explore Work",
-    linkSrc: "/sample-project",
+    linkSrc: projects[5].route,
     storyImg: "/stories/story-6.jpg",
   },
 ];

@@ -4,6 +4,7 @@ import { useRef, useMemo } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useViewTransition } from "@/hooks/useViewTransition";
+import { projects } from "@/data/projects";
 
 gsap.registerPlugin(useGSAP);
 
@@ -13,74 +14,14 @@ const Page = () => {
   const workPageContainer = useRef(null);
 
   const workItems = useMemo(
-    () => [
-      {
-        index: "01",
-        name: "Citychild",
-        href: "/sample-project",
-        variant: "variant-1",
-        images: [
-          "/work/work_1_1.jpg",
-          "/work/work_1_2.jpg",
-          "/work/work_1_3.jpg",
-        ],
-      },
-      {
-        index: "02",
-        name: "Chrome Saint",
-        href: "/sample-project",
-        variant: "variant-2",
-        images: [
-          "/work/work_2_1.jpg",
-          "/work/work_2_2.jpg",
-          "/work/work_2_3.jpg",
-        ],
-      },
-      {
-        index: "03",
-        name: "G-Dream",
-        href: "/sample-project",
-        variant: "variant-2",
-        images: [
-          "/work/work_3_1.jpg",
-          "/work/work_3_2.jpg",
-          "/work/work_3_3.jpg",
-        ],
-      },
-      {
-        index: "04",
-        name: "Stoneface",
-        href: "/sample-project",
-        variant: "variant-3",
-        images: [
-          "/work/work_4_1.jpg",
-          "/work/work_4_2.jpg",
-          "/work/work_4_3.jpg",
-        ],
-      },
-      {
-        index: "05",
-        name: "Amber Cloak",
-        href: "/sample-project",
-        variant: "variant-1",
-        images: [
-          "/work/work_5_1.jpg",
-          "/work/work_5_2.jpg",
-          "/work/work_5_3.jpg",
-        ],
-      },
-      {
-        index: "06",
-        name: "Paper Blade",
-        href: "/sample-project",
-        variant: "variant-2",
-        images: [
-          "/work/work_6_1.jpg",
-          "/work/work_6_2.jpg",
-          "/work/work_6_3.jpg",
-        ],
-      },
-    ],
+    () =>
+      projects.map((project) => ({
+        index: project.index,
+        name: project.name,
+        href: project.route,
+        variant: project.workVariant,
+        images: project.workImages,
+      })),
     []
   );
 

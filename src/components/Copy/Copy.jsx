@@ -62,7 +62,7 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
           const split = SplitText.create(element, {
             type: "lines",
             mask: "lines",
-            linesClass: "line++",
+            linesClass: "copy-line++",
             lineThreshold: 0.1,
           });
 
@@ -81,13 +81,14 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
           lines.current.push(...split.lines);
         });
 
-        gsap.set(lines.current, { y: "100%" });
+        gsap.set(lines.current, { y: "110%", opacity: 0 });
 
         const animationProps = {
           y: "0%",
-          duration: 1,
-          stagger: 0.1,
-          ease: "power4.out",
+          opacity: 1,
+          duration: 1.45,
+          stagger: 0.16,
+          ease: "power3.out",
           delay: delay,
         };
 
@@ -99,11 +100,11 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
 
           ScrollTrigger.create({
             trigger: containerRef.current,
-            start: "top 90%",
+            start: "top bottom",
             onEnter: () => animation.restart(),
             onLeaveBack: () => {
               animation.pause(0);
-              gsap.set(lines.current, { y: "100%" });
+              gsap.set(lines.current, { y: "110%", opacity: 0 });
             },
           });
         } else {
