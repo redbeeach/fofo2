@@ -5,7 +5,7 @@ export const projects = [
     name: "AX-SEO-MANAGER",
     template: "axSeoManager",
     listImage: "/pr_img01.webp",
-    previewImage: "/work_01.webp",
+    previewImage: "/ax_og_image.png",
     route: "/work/ax-seo-manager",
     service: "Design & Development",
     year: "2026",

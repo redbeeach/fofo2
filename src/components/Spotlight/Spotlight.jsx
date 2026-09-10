@@ -95,19 +95,19 @@ const Spotlight = () => {
         <div className="marquee-container" id="marquee-1">
           <div className="marquee">
             <div className="marquee-img-item">
-              <img src="/spotlight/spotlight-1.jpg" alt="" />
+              <img src="/ax_og_image.png" alt="ax-seo-manager" />
             </div>
             <div className="marquee-img-item marquee-text-item">
               <h1>Semantic</h1>
             </div>
             <div className="marquee-img-item">
-              <img src="/spotlight/spotlight-2.jpg" alt="" />
+              <img src="/work_03.webp" alt="" />
             </div>
             <div className="marquee-img-item">
-              <img src="/spotlight/spotlight-3.jpg" alt="" />
+              <img src="/work_02.webp" alt="" />
             </div>
             <div className="marquee-img-item">
-              <img src="/spotlight/spotlight-4.jpg" alt="" />
+              <img src="/pr_img03.webp" alt="" />
             </div>
           </div>
         </div>
