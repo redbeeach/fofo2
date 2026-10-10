@@ -141,7 +141,7 @@ export const projects = [
     ],
   },
   {
-    slug: "Forward dermatology",
+    slug: "Forward",
     index: "03",
     name: "Forward dermatology",
     listImage: "/pr_img02.webp",
