@@ -158,7 +158,7 @@ export const projects = [
     form: "Web Publishing (100%)",
     medium: "Gnuboard 5 (PHP)",
     studio: "Visual Studio & figema",
-    bannerImage: "/pr_img02.webp",
+    bannerImage: "/work_03.webp",
     galleryImages: [
       "/forward_imge2.webp",
       "/forward_imge3.webp",
