@@ -20,27 +20,27 @@ export default function DefaultProject({ project, nextProject, totalProjects }) 
       <section className="project-details">
         <Copy animateOnScroll={true}>
           <div className="details">
-            <p>Concept</p>
+            <p>Overview</p>
             <h3>{project.concept}</h3>
           </div>
 
           <div className="details">
-            <p>Cycle</p>
+            <p>Year</p>
             <h3>{project.year}</h3>
           </div>
 
           <div className="details">
-            <p>Form</p>
+            <p>Role & Scope</p>
             <h3>{project.form}</h3>
           </div>
 
           <div className="details">
-            <p>Medium</p>
+            <p>CMS</p>
             <h3>{project.medium}</h3>
           </div>
 
           <div className="details">
-            <p>Studio</p>
+            <p>Used Tools</p>
             <h3>{project.studio}</h3>
           </div>
         </Copy>
