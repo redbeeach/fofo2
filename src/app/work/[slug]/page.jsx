@@ -2,10 +2,12 @@ import "../project.css";
 import { notFound } from "next/navigation";
 import AxSeoManagerProject from "@/components/ProjectTemplates/AxSeoManagerProject";
 import DefaultProject from "@/components/ProjectTemplates/DefaultProject";
+import ForwardProject from "@/components/ProjectTemplates/ForwardProject";
 import { getNextProject, getProjectBySlug, projects } from "@/data/projects";
 
 const projectTemplates = {
   axSeoManager: AxSeoManagerProject,
+  forward: ForwardProject,
   default: DefaultProject,
 };
 
@@ -27,7 +29,9 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `${project.name} | FOFO`,
-    description: project.concept,
+    description: Array.isArray(project.concept)
+      ? project.concept[0]
+      : project.concept || project.title,
   };
 }
 
@@ -42,7 +46,8 @@ export default async function ProjectPage({ params }) {
   const nextProject = getNextProject(project.slug);
   const totalProjects = projects.length.toString().padStart(2, "0");
   const Template =
-    projectTemplates[project.template] || projectTemplates.default;
+    projectTemplates[project.template] ||
+    (project.slug === "Forward" ? projectTemplates.forward : projectTemplates.default);
 
   return (
     <Template
