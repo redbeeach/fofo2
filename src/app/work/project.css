@@ -15,10 +15,19 @@
 }
 .forward-page .project-details .details:first-child h2 {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.6;
   letter-spacing: 0;
   word-break: keep-all;font-size: 1.1rem;
+}
+
+.forward-page .concept-paragraph {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.forward-page .concept-paragraph:last-child {
+  margin-bottom: 0;
 }
 .project-page .project-header {
   width: 100vw;
