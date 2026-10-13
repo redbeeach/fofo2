@@ -21,7 +21,17 @@ export default function DefaultProject({ project, nextProject, totalProjects }) 
         <Copy animateOnScroll={true}>
           <div className="details">
             <p>Overview</p>
-            <h3>{project.concept}</h3>
+            <h2>
+
+            {Array.isArray(project.concept)
+              ? project.concept.map((paragraph, index) => (
+                  <span key={index} className="concept-paragraph">
+                    {paragraph}
+                  </span>
+                ))
+              : project.concept}
+
+            </h2>
           </div>
 
           <div className="details">

@@ -13,7 +13,13 @@
   letter-spacing: 0;
   word-break: keep-all;
 }
-
+.forward-page .project-details .details:first-child h2 {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0;
+  word-break: keep-all;font-size: 1.1rem;
+}
 .project-page .project-header {
   width: 100vw;
   height: 50svh;
