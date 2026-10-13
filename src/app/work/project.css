@@ -6,6 +6,14 @@
   font-size: 4rem;
 }
 
+.forward-page .project-details .details:first-child h3 {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0;
+  word-break: keep-all;
+}
+
 .project-page .project-header {
   width: 100vw;
   height: 50svh;

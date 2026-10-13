@@ -3,7 +3,7 @@ import Copy from "@/components/Copy/Copy";
 
 export default function DefaultProject({ project, nextProject, totalProjects }) {
   return (
-    <div className="project-page">
+    <div className={`project-page${project.slug === "Forward" ? " forward-page" : ""}`}>
       <section className="project-header">
         <Copy delay={0.75}>
           <p className="lg">{project.kicker}</p>

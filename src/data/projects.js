@@ -154,7 +154,7 @@ export const projects = [
     kicker: "Commerce Interface",
     title: "Forward dermatology",
     concept:
-      "A commerce layout shaped for quick scanning, confident product comparison, and smoother purchase decisions.",
+      "포워드피부과는 클라이언트의 높은 디자인 완성도 요구와 실제 운영 편의성을 함께 고려하여 제작한 프로젝트입니다. 클라이언트가 디자인에 굉장히 꼼꼼하고 세심한 편이어서 제작 과정에서 전체적인 방향을 한 차례 수정했고, 메인 디자인 역시 여러 차례 컨펌을 거친 후 퍼블리싱을 진행했습니다. 그만큼 디자인의 작은 디테일까지 중요했던 프로젝트였으며, 실제 코딩 과정에서도 시안과 1px의 차이도 발생하지 않도록 여백, 폰트, 이미지 배치 등을 세밀하게 확인하며 작업했습니다. 또한 장비 소개 페이지와 의료진 소개 등 운영 중 수정이 필요한 콘텐츠는 관리자가 직접 등록하고 변경할 수 있도록 개발하여 유지보수의 편의성을 높였습니다. 정해진 일정 안에서 다양한 인터랙션까지 구현해야 했기 때문에 애니메이션의 자연스러운 움직임과 성능 최적화에도 신경 썼습니다. 여러 차례의 수정과 피드백을 거치면서 단순히 디자인을 구현하는 것을 넘어, 클라이언트가 원하는 결과물을 정확하게 이해하고 제한된 일정 안에서 완성도를 높이는 경험을 할 수 있었던 프로젝트입니다.",
     form: "Web Publishing (100%)",
     medium: "Gnuboard 5 (PHP)",
     studio: "Visual Studio & figema",
