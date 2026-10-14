@@ -1,64 +1,47 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
-import { ReactLenis } from "lenis/react";
+import { useEffect, useRef } from "react";
 import Menu from "./components/Menu/Menu";
 
 export default function ClientLayout({ children }) {
   const pageRef = useRef();
 
-  const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 1000);
-    };
+    let lenis;
+    let animationFrame;
+    let cancelled = false;
 
-    checkMobile();
+    import("lenis").then(({ default: Lenis }) => {
+      if (cancelled) return;
 
-    window.addEventListener("resize", checkMobile);
-
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  const scrollSettings = isMobile
-    ? {
-        duration: 0.8,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        direction: "vertical",
-        gestureDirection: "vertical",
-        smooth: true,
-        smoothTouch: true,
-        touchMultiplier: 1.5,
-        infinite: false,
-        lerp: 0.09,
-        wheelMultiplier: 1,
-        orientation: "vertical",
+      lenis = new Lenis({
+        autoRaf: false,
         smoothWheel: true,
-        syncTouch: true,
-      }
-    : {
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        direction: "vertical",
-        gestureDirection: "vertical",
-        smooth: true,
-        smoothTouch: false,
-        touchMultiplier: 2,
-        infinite: false,
         lerp: 0.1,
-        wheelMultiplier: 1,
-        orientation: "vertical",
-        smoothWheel: true,
-        syncTouch: true,
+        syncTouch: false,
+      });
+
+      const raf = (time) => {
+        lenis.raf(time);
+        animationFrame = window.requestAnimationFrame(raf);
       };
 
+      animationFrame = window.requestAnimationFrame(raf);
+    });
+
+    return () => {
+      cancelled = true;
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
+      lenis?.destroy();
+    };
+  }, []);
+
   return (
-    <ReactLenis root options={scrollSettings}>
+    <>
       <Menu pageRef={pageRef} />
 
       <div className="page" ref={pageRef}>
         {children}
       </div>
-    </ReactLenis>
+    </>
   );
 }

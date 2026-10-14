@@ -4,7 +4,6 @@ import { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/all";
 import { useGSAP } from "@gsap/react";
-import { useLenis } from "lenis/react";
 import { useViewTransition } from "@/hooks/useViewTransition";
 
 gsap.registerPlugin(useGSAP, SplitText);
@@ -26,8 +25,6 @@ const Menu = ({ pageRef }) => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuAnimating, setIsMenuAnimating] = useState(false);
-
-  const lenis = useLenis();
 
   const { navigateWithTransition } = useViewTransition();
 
@@ -306,15 +303,6 @@ const Menu = ({ pageRef }) => {
     },
     { scope: menuOverlayRef }
   );
-
-  useEffect(() => {
-    if (!lenis) return;
-    if (isMenuOpen) {
-      lenis.stop();
-    } else {
-      lenis.start();
-    }
-  }, [lenis, isMenuOpen]);
 
   const toggleMenu = () => {
     if (isMenuAnimating) return;

@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import CustomEase from "gsap/CustomEase";
 import { useGSAP } from "@gsap/react";
-import { useLenis } from "lenis/react";
 
 gsap.registerPlugin(useGSAP, SplitText, CustomEase);
 CustomEase.create("hop", "0.9, 0, 0.1, 1");
@@ -16,23 +15,11 @@ const Preloader = () => {
   const preloaderRef = useRef(null);
   const [showPreloader, setShowPreloader] = useState(isInitialLoad);
   const [loaderAnimating, setLoaderAnimating] = useState(false);
-  const lenis = useLenis();
-
   useEffect(() => {
     return () => {
       isInitialLoad = false;
     };
   }, []);
-
-  useEffect(() => {
-    if (lenis) {
-      if (loaderAnimating) {
-        lenis.stop();
-      } else {
-        lenis.start();
-      }
-    }
-  }, [lenis, loaderAnimating]);
 
   useGSAP(
     () => {

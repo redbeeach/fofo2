@@ -158,6 +158,7 @@ export const projects = [
     form: "Web Publishing (100%)",
     medium: "Gnuboard 5 (PHP)",
     studio: "Visual Studio & figema",
+    liveUrl: "https://www.forwardclinic.co.kr/",
     bannerImage: "/work_03.webp",
     galleryImages: [
       "/forward_imge2.webp",
