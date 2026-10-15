@@ -484,18 +484,20 @@ const Menu = ({ pageRef }) => {
           >
             <div className="menu-content-group">
               <p>&copy; Web Publisher Portfolio</p>
-              <p>Markup and Interaction</p>
+              <p>Brand Websites &amp; Digital Experiences</p>
               <p>Seoul</p>
             </div>
 
             <div className="menu-content-group">
               <p>Focus</p>
-              <p>Responsive Web</p>
+              <p>Brand Websites</p>
+              <p>Web Publishing</p>
+              <p>Digital Experiences</p>
             </div>
 
             <div className="menu-content-group">
               <p>Say Hello</p>
-              <p>publisher@example.com</p>
+              <p>hby1126hh@naver.com</p>
             </div>
 
             <div className="menu-content-group">
@@ -510,25 +512,13 @@ const Menu = ({ pageRef }) => {
             }}
           >
             <div className="menu-content-group">
-              <p>Archive</p>
-
-              <a href="https://www.instagram.com/codegridweb/" target="_blank">
-                Instagram
-              </a>
-
-              <a href="https://www.youtube.com/@codegrid" target="_blank">
-                YouTube
-              </a>
-            </div>
-
-            <div className="menu-content-group">
               <p>Language</p>
               <p>Korean</p>
             </div>
 
             <div className="menu-content-group">
               <p>Credits</p>
-              <p>Made by Web Publisher</p>
+              <p>Designed &amp; Developed by HBY</p>
               <p>Portfolio 2026</p>
             </div>
           </div>

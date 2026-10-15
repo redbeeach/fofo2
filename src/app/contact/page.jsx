@@ -1,7 +1,6 @@
 "use client";
 import "./contact.css";
 import { useEffect, useRef } from "react";
-import Button from "@/components/Button/Button";
 import Copy from "@/components/Copy/Copy";
 
 const Page = () => {
@@ -199,7 +198,7 @@ const Page = () => {
       <div className="contact-copy">
         <div className="contact-col">
           <Copy delay={0.8}>
-            <h2>Things in motion stay interesting</h2>
+            <h2>Let’s make something worth remembering.</h2>
           </Copy>
         </div>
 
@@ -207,30 +206,29 @@ const Page = () => {
           <div className="contact-group">
             <Copy delay={0.8}>
               <p className="sm">Focus</p>
-              <p>Motion Worlds</p>
-              <p>Dream Engineering</p>
-              <p>Strange Branding</p>
+              <p>Brand Websites</p>
+              <p>Web Publishing</p>
+              <p>Digital Experiences</p>
             </Copy>
           </div>
 
-          <div className="contact-group">
+          <div className="contact-group contact-details">
             <Copy delay={1.2}>
-              <p className="sm">Base</p>
-              <p>Old Harbour District, Oslo</p>
+              <p className="sm">Contact Details</p>
+              <p className="">
+                hby1126hh@naver.com
+              </p>
+              <p className="">
+                010 5464 4110
+              </p>
             </Copy>
-          </div>
-
-          <div className="contact-mail">
-            <Button delay={1.3} href="/">
-              studio@politechaos.com
-            </Button>
           </div>
 
           <div className="contact-group">
             <Copy delay={1.4}>
               <p className="sm">Credits</p>
-              <p>Created by Codegrid</p>
-              <p>Edition 2025</p>
+              <p>Designed &amp; Developed by HBY</p>
+              <p>Portfolio 2026</p>
             </Copy>
           </div>
         </div>
@@ -242,39 +240,8 @@ const Page = () => {
             <p className="sm">Made in Motion</p>
           </Copy>
 
-          <div className="contact-socials">
-            <Copy delay={1.7} animateOnScroll={false}>
-              <a
-                className="sm"
-                href="https://www.instagram.com/codegridweb/"
-                target="_blank"
-              >
-                Instagram
-              </a>
-            </Copy>
-
-            <Copy delay={1.8} animateOnScroll={false}>
-              <a
-                className="sm"
-                href="https://www.youtube.com/@codegrid"
-                target="_blank"
-              >
-                YouTube
-              </a>
-            </Copy>
-
-            <Copy delay={1.9} animateOnScroll={false}>
-              <a
-                className="sm"
-                href="https://x.com/codegridweb"
-                target="_blank"
-              >
-                Twitter
-              </a>
-            </Copy>
-          </div>
           <Copy delay={2} animateOnScroll={false}>
-            <p className="sm">&copy; Polite Chaos</p>
+            <p className="sm">&copy; Portfolio</p>
           </Copy>
         </div>
       </div>
