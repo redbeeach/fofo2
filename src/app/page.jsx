@@ -55,7 +55,7 @@ const Page = () => {
                 </p>
               </Copy>
 
-              <Button delay={isInitialLoad ? 6.35 : 1.55} href="/studio">
+              <Button delay={isInitialLoad ? 6.35 : 1.55} href="/about">
                 About Me
               </Button>
             </div>

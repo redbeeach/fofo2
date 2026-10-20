@@ -101,11 +101,8 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
           ScrollTrigger.create({
             trigger: containerRef.current,
             start: "top bottom",
-            onEnter: () => animation.restart(),
-            onLeaveBack: () => {
-              animation.pause(0);
-              gsap.set(lines.current, { y: "110%", opacity: 0 });
-            },
+            animation,
+            toggleActions: "play none none reverse",
           });
         } else {
           gsap.to(lines.current, animationProps);

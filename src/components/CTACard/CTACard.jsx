@@ -62,7 +62,7 @@ const CTACard = () => {
                 delay={0.25}
                 variant="light"
                 icon={MdArticle}
-                href="/studio"
+                href="/about"
               >
                 View Profile
               </Button>

@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-export default function TeamCards() {
+export default function TeamCards({ showCards = true }) {
   const stickyRef = useRef(null);
   const headerRef = useRef(null);
   const cardsRef = useRef([]);
@@ -24,7 +24,7 @@ export default function TeamCards() {
         const stickyHeader = headerRef.current;
         const cards = cardsRef.current;
 
-        if (!stickySection || !stickyHeader || !cards || cards.length === 0) {
+        if (!stickySection || !stickyHeader) {
           return () => {};
         }
 
@@ -98,6 +98,8 @@ export default function TeamCards() {
 
             const translateX = -progress * maxTranslate;
             gsap.set(stickyHeader, { x: translateX });
+
+            if (!showCards) return;
 
             cards.forEach((card, index) => {
               const delay = index * 0.1125;
@@ -201,7 +203,7 @@ export default function TeamCards() {
         <div className="sticky-header" ref={headerRef}>
           <h1>Minds at Work</h1>
         </div>
-        {teamMembers.map((m, idx) => (
+        {showCards && teamMembers.map((m, idx) => (
           <div
             className="card"
             id={m.id}
@@ -228,7 +230,7 @@ export default function TeamCards() {
         <div className="mobile-header">
           <h1>Minds at Work</h1>
         </div>
-        {teamMembers.map((m) => (
+        {showCards && teamMembers.map((m) => (
           <div className="card" id={m.id} key={`m-${m.id}`}>
             <div className="card-img">
               <img src={m.img} alt={m.alt} />
