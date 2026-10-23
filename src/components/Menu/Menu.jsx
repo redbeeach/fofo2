@@ -456,7 +456,8 @@ const Menu = ({ pageRef }) => {
               navigateWithTransition("/", isMenuOpen ? toggleMenu : null);
             }}
           >
-            <span className="nav-logo-name">YUNHONGBI</span>
+            <span className="nav-logo-name">YUN</span>
+            <span className="nav-logo-label">HONGBI</span>
             <span className="nav-logo-label">PORTFOLIO</span>
           </a>
         </div>

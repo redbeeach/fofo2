@@ -7,7 +7,7 @@ nav {
   color: var(--base-100);
   display: flex;
   justify-content: space-between;
-  z-index: 2;
+  z-index: 99;
 }
 
 nav .nav-logo a {
@@ -19,7 +19,7 @@ nav .nav-logo a {
   width: max-content;
   color: var(--base-100);
   text-decoration: none;
-  background-color: red;
+  background-color: #000;
   border-radius: .5rem;
   padding: 0.7rem 0.7rem 0.5rem;
 }
