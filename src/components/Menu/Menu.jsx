@@ -503,7 +503,7 @@ const Menu = ({ pageRef }) => {
 
             <div className="menu-content-group">
               <p>Skills</p>
-              <p>HTML CSS JS</p>
+              <p>HTML · CSS · JS · PHP · MySQL · Next.js</p>
             </div>
           </div>
           <div

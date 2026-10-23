@@ -18,8 +18,9 @@ const CTACard = () => {
           <div className="cta-col">
             <Copy animateOnScroll={true}>
               <p className="lg">
-                I read the design carefully, build a clear markup structure,
-                and use flexible CSS to keep the layout stable on every screen.
+                I analyze the requirements, build a precise responsive
+                interface, connect the CMS and backend features, then test and
+                maintain the result for real-world operation.
               </p>
             </Copy>
 
@@ -52,8 +53,8 @@ const CTACard = () => {
 
                 <p>
                   My publishing work is based on HTML, CSS, and JavaScript, with
-                  attention to web standards, accessibility, and code that stays
-                  easy to maintain.
+                  PHP, MySQL, CMS customization, and attention to web standards,
+                  accessibility, and code that stays easy to maintain.
                 </p>
               </Copy>
 

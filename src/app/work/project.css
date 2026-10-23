@@ -334,9 +334,7 @@ body:has(.forward-editorial-page)::-webkit-scrollbar {
 .forward-editorial-page p,
 .forward-editorial-page span,
 .forward-editorial-page strong {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  letter-spacing: 0;
-  text-transform: none;
+ letter-spacing: 0;
 }
 
 .forward-editorial-hero {
