@@ -110,6 +110,7 @@ export const projects = [
     slug: "brand-community",
     index: "02",
     name: "Brand Community",
+    template: "brandCommunity",
     listImage: "/pr_img03.webp",
     previewImage: "/pr_img03.webp",
     route: "/work/brand-community",
@@ -124,6 +125,9 @@ export const projects = [
     form: "Community Website",
     medium: "Brand UI and Interaction",
     studio: "FOFO",
+    liveUrl: "/work/brand-community",
+    manualUrl: "/work/brand-community",
+    adminUrl: "/work/brand-community",
     bannerImage: "/project/sample-project-2.jpg",
     galleryImages: [
       "/project/sample-project-1.jpg",

@@ -1,12 +1,14 @@
 import "../project.css";
 import { notFound } from "next/navigation";
 import AxSeoManagerProject from "@/components/ProjectTemplates/AxSeoManagerProject";
+import BrandCommunityProject from "@/components/ProjectTemplates/BrandCommunityProject";
 import DefaultProject from "@/components/ProjectTemplates/DefaultProject";
 import ForwardProject from "@/components/ProjectTemplates/ForwardProject";
 import { getNextProject, getProjectBySlug, projects } from "@/data/projects";
 
 const projectTemplates = {
   axSeoManager: AxSeoManagerProject,
+  brandCommunity: BrandCommunityProject,
   forward: ForwardProject,
   default: DefaultProject,
 };
