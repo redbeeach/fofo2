@@ -4,10 +4,9 @@ import { useEffect, useRef } from "react";
 import Footer from "@/components/Footer/Footer";
 import Copy from "@/components/Copy/Copy";
 
-const KAKAO_MAP_APP_KEY = "YOUR_KAKAO_APP_KEY";
 
 const metaItems = [
-  { label: "Year / Timeline", value: "2025" },
+  { label: "Year / Timeline", value: "2025 - 2026" },
   { label: "Role & Scope", value: "Development · Publishing (100%)" },
   { label: "Target CMS", value: "Gnuboard 5 (PHP)" },
   { label: "Used Tools", tools: true },
@@ -16,155 +15,156 @@ const metaItems = [
 const briefs = [
   {
     title: "Overview",
-    subtitle: "브랜드와 커뮤니티를 하나의 경험으로 연결합니다.",
+    subtitle: "의료 콘텐츠의 접근성과 운영 효율성을 함께 설계합니다.",
     paragraphs: [
-      "브랜드 커뮤니티는 단순한 게시판이 아니라, 팬과 멤버가 함께 이야기를 만들고 참여하며 브랜드에 대한 신뢰를 쌓는 장으로 설계되었습니다.",
-      "회원 스토리, 업데이트, 이벤트, 참여 유도 흐름이 각각 분리되지 않고 하나의 브랜드 이야기 안에서 자연스럽게 연결되도록 구성했습니다.",
-      "모든 인터랙션은 브랜드의 톤을 유지하면서도, 사용자가 다음 행동으로 이어지기 쉬운 구조로 설계했습니다.",
+      "힐링백반증은 백반증에 대한 전문적인 의학 정보를 제공하고, 환자들이 정보를 공유하며 소통할 수 있도록 구축한 의료 전문 커뮤니티입니다.",
+      "일반적인 게시판 형태에서 벗어나 의료 콘텐츠의 전문성과 가독성을 강조하면서도, 내부 운영자가 지속적으로 콘텐츠를 관리할 수 있는 환경을 목표로 했습니다.",
+      "그누보드5를 기반으로 PHP·MySQL을 활용한 맞춤형 기능을 개발하고, 콘텐츠 검색부터 의료진 프로필 연동, 치료병원 찾기까지 사용자 중심의 플랫폼으로 확장했습니다.",
     ],
   },
   {
     title: "Challenge",
-    subtitle: "정보는 많지만, 참여로 이어지지는 않았습니다.",
+    subtitle: "CMS의 관리 편의성과 전문 콘텐츠 구조를 동시에 유지해야 했습니다.",
     paragraphs: [
-      "브랜드의 메시지는 담겨 있지만, 멤버가 어떤 콘텐츠를 보고 어떤 행동을 취해야 하는지 흐름이 분명하지 않은 경우가 많았습니다.",
-      "특히 커뮤니티는 이야기의 가치를 높이는 것도 중요하지만, 방문자가 실제로 참여하고 다시 돌아오도록 만드는 구조가 필요했습니다.",
-      "그래서 단순한 정보 전달을 넘어, 사용자 경험의 흐름과 브랜드 감정을 함께 설계하는 것이 핵심이었습니다.",
+      "일반적인 게시판의 구조를 벗어나면서도 CMS의 관리 편의성을 유지하는 것이 가장 큰 과제였습니다.",
+      "클라이언트는 전문 매거진처럼 구성된 콘텐츠 페이지를 원했지만, 동시에 내부 마케팅팀이 게시글과 의료진 정보를 직접 등록하고 수정할 수 있어야 했습니다.",
+      "하나의 게시글에 여러 의료진이 참여하는 공동 작성 구조와 본문 색인, 관련 콘텐츠 연결, SEO 최적화 등 기존 게시판에서 제공하지 않는 기능도 필요했습니다.",
+      "프로젝트 진행 중에는 약 700개 병원 데이터를 활용한 치료병원 찾기 기능이 추가되면서, 사용자 위치와 치료 장비 보유 여부에 따라 검색 결과를 제공하고 복잡한 필터 및 정렬 조건을 처리해야 하는 개발 과제가 발생했습니다.",
     ],
   },
   {
     title: "Our Approach",
-    subtitle: "브랜드 감정과 행동 유도를 함께 설계합니다.",
+    subtitle: "요구사항을 구조로 바꾸고, 기능을 실제 운영 환경에 맞게 구현했습니다.",
     paragraphs: [
-      "커뮤니티 페이지는 스토리 중심의 콘텐츠 구조와 명확한 행동 유도 경로를 결합해 구성했습니다.",
-      "회원 후기, 최신 소식, 이벤트, 참여 안내를 각각 독립된 정보가 아니라 하나의 연속된 브랜드 경험으로 연결했습니다.",
-      "디자인은 우아하지만 유도적인 흐름을 유지하면서, 사용자가 빠르게 탐색하고 자연스럽게 참여에 이르도록 가이드했습니다.",
-      "일부 오프라인 체험 요소에는 카카오맵 API를 연동해 브랜드 라운지, 이벤트 장소, 커뮤니티 공간 위치를 직관적으로 확인할 수 있도록 구성했습니다.",
+      "그누보드5의 기존 구조를 확장하고, PHP·MySQL과 JavaScript를 활용해 콘텐츠 관리 및 검색 기능을 맞춤형으로 개발했습니다.",
+      "게시글과 의료진 정보를 연결하는 데이터 처리 로직을 구현해 여러 의료진의 프로필이 하나의 콘텐츠에 표시되도록 구성했습니다. 또한 에디터에 제목 태그 설정과 글자 수 확인 기능을 추가하고, 본문 제목을 기반으로 자동 생성되는 색인(TOC), 태그 및 검색 기능을 개발해 콘텐츠 탐색 경험을 개선했습니다.",
+      "SEO를 고려해 게시글별 메타데이터와 오픈그래프 이미지를 동적으로 처리하고, 운영자가 별도의 코드 수정 없이 콘텐츠를 관리할 수 있도록 관리자 기능을 확장했습니다.",
+      "추가 요구사항이었던 치료병원 찾기는 카카오맵 API와 병원 DB를 연동해 구현했습니다. 현재 위치를 기준으로 병원을 탐색하고, 치료 장비별 필터와 검색 조건에 따른 정렬 로직을 적용했습니다. 지도 마커와 병원 리스트를 양방향으로 연결하고, 관리자 페이지에서도 병원 데이터를 직접 수정할 수 있도록 개선했습니다.",
     ],
   },
 ];
 
 const workflow = [
   {
-    eyebrow: "01 / Story",
-    title: "Brand Narrative Structure",
+    eyebrow: "01 / Interpretation",
+    title: "Requirement Analysis",
     description:
-      "브랜드의 핵심 메시지와 커뮤니티 콘텐츠를 연결해, 사용자에게 한 흐름의 스토리를 전달하도록 구성했습니다.",
-    note: "NARRATIVE: Community-first brand story",
+      "클라이언트의 요구를 단순한 게시판 운영이 아니라, 의료 전문 콘텐츠와 커뮤니티 참여를 함께 지원하는 구조로 해석했습니다.",
+    note: "REQUIREMENT: Content + trust + operations",
   },
   {
-    eyebrow: "02 / Content",
-    title: "Member Story & Updates",
+    eyebrow: "02 / CMS Structure",
+    title: "Content & Profile Integration",
     description:
-      "실제 멤버 경험, 브랜드 업데이트, 이벤트 정보를 자연스럽게 섞어 방문자가 브랜드의 현재를 체감할 수 있게 구성했습니다.",
-    note: "CONTENT: Story / Update / Participation",
+      "게시글, 의료진, 관련 콘텐츠를 연결하는 데이터 구조를 설계해 전문 매거진형 콘텐츠와 운영 편의성을 동시에 확보했습니다.",
+    note: "CMS: Readability + admin usability",
   },
   {
-    eyebrow: "03 / Journey",
-    title: "Conversion Path Design",
+    eyebrow: "03 / Search & Discovery",
+    title: "Search, Indexing & SEO",
     description:
-      "단순히 보고 끝나는 구조가 아니라, 페이지 안에서 참여, 가입, 문의, 체험 전환으로 연결되는 경로를 설계했습니다.",
-    note: "FLOW: Discover → Engage → Convert",
+      "본문 색인, 태그, 제목 태그, 메타데이터 자동화 및 검색 로직을 구현해 사용자 탐색성과 콘텐츠 관리 효율성을 개선했습니다.",
+    note: "SYSTEM: TOC / tags / metadata / search",
   },
   {
-    eyebrow: "04 / Experience",
-    title: "Tone-Driven Interface",
+    eyebrow: "04 / Map Integration",
+    title: "Location-Based Hospital Discovery",
     description:
-      "브랜드의 이미지와 커뮤니티의 친근함을 동시에 살리기 위해 여백, 타이포, 영상, 모션의 톤을 정교하게 맞췄습니다.",
-    note: "UX: Premium but approachable",
+      "카카오맵 API와 병원 DB를 연동해 위치 기반 검색, 필터, 정렬, 마커 연결까지 구현해 실사용성 높은 의료 정보 탐색을 제공했습니다.",
+    note: "TECH: Kakao Maps API + PHP + MySQL",
   },
 ];
 
 const metrics = [
   {
-    title: "01. Brand Presence",
-    note: "Distinctive identity",
+    title: "01. Requirement interpretation",
+    note: "Problem understanding",
     tone: "neutral",
     points: [
-      "브랜드 핵심 가치의 시각적 전달",
-      "멤버에게 신뢰감 있는 첫인상 구성",
-      "목적에 맞는 정보 우선순위 배치",
+      "전문 의료 콘텐츠와 운영 편의성의 균형 설계",
+      "기존 게시판 구조의 한계를 해결하는 문제 정의",
+      "사용자 경험과 관리자 운영 흐름을 함께 고려",
     ],
   },
   {
-    title: "02. Community Flow",
-    note: "User journey design",
+    title: "02. CMS architecture",
+    note: "Content system design",
     tone: "sky",
     points: [
-      "스토리 → 업데이트 → 참여 유도 구조",
-      "이야기 중심 탐색 경험",
-      "다음 행동을 자연스럽게 연결",
+      "게시글 · 의료진 · 관련 콘텐츠 연결 구조",
+      "운영자가 직접 관리 가능한 콘텐츠 모델 설계",
+      "전문 매거진형 UI와 CMS 운영 편의성 조화",
     ],
   },
   {
-    title: "03. Engagement Design",
-    note: "Repeat interaction",
+    title: "03. Search and discoverability",
+    note: "Technology implementation",
     tone: "emerald",
     points: [
-      "콘텐츠별 참여 유도 문구 구성",
-      "리뷰, 이벤트, 소식의 유기적 연결",
-      "재방문을 유도하는 감성적 포인트",
+      "TOC, 태그, 검색, 메타데이터 자동화 구현",
+      "SEO 및 콘텐츠 탐색 경험 개선",
+      "검색 조건에 따른 정보 접근성 향상",
     ],
   },
   {
-    title: "04. Conversion Intent",
-    note: "Action-ready layout",
+    title: "04. Service expansion",
+    note: "Map-based utility",
     tone: "indigo",
     points: [
-      "문의/신청 CTA 명확화",
-      "브랜드 메시지와 행동 경로 일치",
-      "정보 탐색과 전환 간 간극 최소화",
+      "위치 기반 병원 검색 기능 설계",
+      "카카오맵 API 연동과 필터 정렬 로직 구현",
+      "관리자 페이지에서 데이터 수정 및 운영 대응 강화",
     ],
   },
 ];
 
 const capabilities = [
   {
-    eyebrow: "Story-first",
+    eyebrow: "Requirement mapping",
     tone: "indigo",
-    title: "브랜드 메시지의 연속성",
+    title: "문제 해석과 구조 설계",
     description:
-      "각 섹션이 단절되지 않고 하나의 브랜드 이야기로 연결되도록 구성하여 사용자가 페이지 전체를 통해 브랜드의 방향성을 이해할 수 있게 했습니다.",
-    code: "Narrative continuity / brand clarity",
+      "단순한 게시판 기능이 아니라, 전문 의료 콘텐츠와 운영 효율성을 동시에 만족해야 하는 문제를 정의하고 구조적으로 재설계했습니다.",
+    code: "Requirement → CMS → UX",
   },
   {
-    eyebrow: "Community UX",
+    eyebrow: "Technical execution",
     tone: "sky",
-    title: "시선 이동의 흐름 설계",
+    title: "실제 기능 구현",
     description:
-      "스크롤 흐름에 따라 정보의 중요도가 자연스럽게 전환되도록 배치해, 페이지를 읽는 동안 참여로 이어지기 쉬운 구조를 만들었습니다.",
-    code: "Discover → Engage → Convert",
+      "게시글, 의료진, 검색, 메타데이터, 지도 연동까지 PHP·MySQL·JavaScript 기반으로 직접 구현하며 운영 가능한 기능으로 연결했습니다.",
+    code: "PHP / MySQL / Kakao Maps API",
   },
   {
-    eyebrow: "Interaction",
+    eyebrow: "Service value",
     tone: "emerald",
-    title: "감각적인 브랜드 경험",
+    title: "사용자와 운영자의 가치 동시에 확보",
     description:
-      "타이포, 간격, 포토그래피 흐름, CTA의 톤을 조율해 브랜드의 고급스러움과 친근함을 함께 살렸습니다.",
-    code: "Premium tone / community warmth",
+      "콘텐츠 탐색의 편의성과 관리자 운영 편의성을 함께 개선해 의료 커뮤니티가 실제로 기능하도록 만드는 데 초점을 맞췄습니다.",
+    code: "User value / admin efficiency",
   },
 ];
 
 const highlights = [
   {
-    title: "Narrative Content Structure",
+    title: "Requirement-Driven CMS Customization",
     description:
-      "브랜드 메시지, 업데이트, 멤버 경험을 긴밀하게 연결해 단순한 정보 나열이 아니라 일관된 스토리형 경험을 구현했습니다.",
+      "전문 의료 콘텐츠를 게시판형 구조로 무리 없이 재구성하면서, 운영자가 직접 관리할 수 있는 CMS 환경을 유지하도록 설계했습니다.",
   },
   {
-    title: "Participation-Oriented UX",
+    title: "Content Discovery and SEO Structure",
     description:
-      "사용자가 정보를 소비하는 수준을 넘어 참여와 전환까지 자연스럽게 이어지는 경로를 설계했습니다.",
+      "게시글 구조, 태그, 검색, 메타데이터를 연결해 의료 정보를 더 빠르게 찾고 가독성 있게 전달할 수 있는 구조로 개선했습니다.",
   },
   {
-    title: "Premium Community Identity",
+    title: "Location-Based Medical Utility",
     description:
-      "브랜드의 정체성과 커뮤니티의 접근성을 동시에 살려, 고급스럽지만 친근한 인터페이스를 완성했습니다.",
+      "병원 정보를 지도와 검색 결과를 연결하는 사용자 흐름을 구축해, 단순한 정보 제공을 넘어 실제 의사결정을 돕는 기능으로 확장했습니다.",
   },
   {
-    title: "Responsive Editorial Layout",
+    title: "Operational Readiness",
     description:
-      "대형 화면에서 브랜드 스토리를 압도적으로 보여주고, 모바일에서는 연속적인 콘텐츠 흐름을 유지하도록 유동적인 그리드를 구성했습니다.",
+      "관리자 페이지에서 병원 데이터와 콘텐츠를 직접 수정할 수 있도록 구성해 실서비스 운영에 필요한 유지보수성을 확보했습니다.",
   },
 ];
 
@@ -290,9 +290,9 @@ export default function BrandCommunityProject({ project, nextProject, totalProje
             <i></i>
             <Copy animateOnScroll={true}>
               <h2>
-                멤버는 브랜드를 소비하는 것이 아니라,
+                전문 의료 콘텐츠의 접근성과 운영 효율성을 함께 고려하여, 
                 <br />
-                브랜드 안에서 함께 참여하고 기억을 만드는 경험을 원합니다.
+                콘텐츠 관리부터 위치 기반 치료병원 검색까지 구현한 의료 전문 커뮤니티 프로젝트입니다.
               </h2>
             </Copy>
           </div>
@@ -351,8 +351,8 @@ export default function BrandCommunityProject({ project, nextProject, totalProje
           <div className="ax-case-content">
             <Copy animateOnScroll={true}>
               <p className="ax-case-lead">
-                오늘날 브랜드는 제품이나 서비스만 전달하는 것이 아니라, <strong>멤버가 스스로 참여하고 기억을 남기는 경험</strong>을 제공해야 합니다.
-                커뮤니티 페이지는 정보 전달을 넘어 브랜드의 감정과 참여를 연결하는 가장 중요한 장치입니다.
+                의료 정보는 단순히 많이 보여주는 것보다, <strong>어떤 정보를 누구에게 어떻게 전달할 것인지</strong>가 중요합니다.
+                커뮤니티 플랫폼은 전문성, 신뢰, 운영 편의성을 함께 담아야 하며, 이 문제를 구조적으로 풀어내는 것이 핵심이었습니다.
               </p>
             </Copy>
 
@@ -360,20 +360,20 @@ export default function BrandCommunityProject({ project, nextProject, totalProje
               <article>
                 <Copy animateOnScroll={true}>
                   <span className="is-rose">The Problem</span>
-                  <h3>정보는 많지만 참여로 이어지지 않음</h3>
+                  <h3>CMS 구조와 콘텐츠 전문성이 충돌함</h3>
                   <p>
-                    많은 브랜드 커뮤니티는 게시글, 이벤트, 이야기들이 분산되어 있어 사용자가 어디서부터 봐야 할지
-                    헷갈리기 쉽습니다. 결과적으로 브랜드 메시지는 전달되지만 참여는 약해집니다.
+                    일반적인 게시판은 관리 편의성은 좋지만 전문 의료 콘텐츠를 효과적으로 전달하기에는 구조적으로 부족했습니다.
+                    동시에 브랜드와 운영팀은 콘텐츠를 직접 관리해야 했기 때문에, 단순한 템플릿 중심의 구현으로는 한계가 있었습니다.
                   </p>
                 </Copy>
               </article>
               <article>
                 <Copy animateOnScroll={true}>
                   <span className="is-emerald">The Objective</span>
-                  <h3>브랜드를 경험으로 만들기</h3>
+                  <h3>정보 전달과 운영성을 동시에 개선</h3>
                   <p>
-                    스토리, 업데이트, 멤버 활동, 참여 유도를 하나의 연속된 흐름으로 설계해 사용자가 자연스럽게
-                    브랜드에 몰입하고, 결국 브랜드의 가치와 행동을 연결하도록 구성했습니다.
+                    의료 콘텐츠를 매거진처럼 읽기 쉽게 구성하면서도, 운영자가 게시글과 의료진 정보를 자유롭게 관리할 수 있는 구조를 설계했습니다.
+                    사용자와 관리자 모두에게 실용적인 가치를 제공하는 것이 목표였습니다.
                   </p>
                 </Copy>
               </article>
@@ -382,7 +382,7 @@ export default function BrandCommunityProject({ project, nextProject, totalProje
         </section>
 
         <section className="ax-case-section ax-case-container">
-          <SectionHeading index="02" label="Process Architecture" title="Community Experience Flow" />
+          <SectionHeading index="02" label="Process Architecture" title="Technical Problem Solving" />
           <div className="ax-case-card-grid">
             {workflow.map((item) => (
               <article className="ax-case-card" key={item.eyebrow}>
@@ -425,10 +425,10 @@ export default function BrandCommunityProject({ project, nextProject, totalProje
 
         <section className="ax-case-capabilities ax-case-container">
           <div className="ax-case-capabilities-head">
-            <SectionHeading index="04" label="Advanced Capabilities" title="Brand Experience Design" />
+            <SectionHeading index="04" label="Advanced Capabilities" title="Technical Value Creation" />
             <Copy animateOnScroll={true}>
               <p>
-                브랜딩과 커뮤니티 UX를 결합해, 단순한 정보 페이지를 넘어 브랜드를 기억하게 만드는 경험을 설계했습니다.
+                전문 의료 서비스의 성격상 단순한 시각적 구현이 아니라, 실제 운영을 지원하는 기술적 구조가 중요했습니다.
               </p>
             </Copy>
           </div>
@@ -447,7 +447,7 @@ export default function BrandCommunityProject({ project, nextProject, totalProje
         </section>
 
         <section className="ax-case-section ax-case-container">
-          <SectionHeading index="05" label="Design Highlights" title="Community Brand Direction" />
+          <SectionHeading index="05" label="Design Highlights" title="Operational and Service Impact" />
           <div className="ax-case-highlight-grid">
             {highlights.map((highlight) => (
               <article key={highlight.title}>
